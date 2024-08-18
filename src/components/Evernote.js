@@ -144,7 +144,7 @@ export default function Evernote() {
             <div className={styles.showNotes}>
                 {notesArray.length > 0 && notesArray.map((note) => {
                     return (
-                        <div className={styles.innerNotes}>
+                        <div key={note.id} className={styles.innerNotes}>
                             <AiFillEdit 
                                 onClick={() => getId(note.id, note.note, note.noteDesc)}
                                 size={30} 
